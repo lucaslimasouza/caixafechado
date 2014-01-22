@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Admin do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  context "association" do
+    it { should have_one(:company) }
+  end
+
+  context "accept nested attributes" do
+    it { should accept_nested_attributes_for(:company).allow_destroy(true) }
+  end
 end
