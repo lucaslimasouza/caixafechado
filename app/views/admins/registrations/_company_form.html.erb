@@ -1,0 +1,30 @@
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :autofocus => true %>
+    <%= error_tag resource.company, :name %>
+  </p>
+  <p>
+    <%= f.label :cnpj %>
+    <%= f.text_field :cnpj %>
+    <%= error_tag resource.company, :cnpj %>
+  </p>
+  <p>
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+    <%= error_tag resource.company, :phone %>
+  </p>
+  <p>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <%= error_tag resource.company, :adrress %>
+  </p>
+  <p>
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+    <%= error_tag resource.company, :number %>
+  </p>
+  <p>
+    <%= f.label :cep %>
+    <%= f.text_field :cep %>
+    <%= error_tag resource.company, :cep %>
+  </p>

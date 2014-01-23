@@ -8,7 +8,32 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container-fluid back-color-panel">
+  <!-- ROW -->
+  <div class="row-fluid  margin">
+
+    <div class="span12 ">
+      
+      <% if flash[:notice].present? %>
+        <div class="alert alert-success">
+          <p id="notice"><%= flash[:notice] %> </p>
+        </div>
+      <% end %>
+        
+      <% if alert.present? %>
+        <div class="alert alert-danger">
+          <p id="alert"><%= alert %> </p>
+        </div>
+      <% end %>
+
+      <%= yield %>
+
+
+      </div>
+
+    </div>
+    <!-- FIM ROW -->  
+  </div
 
 </body>
 </html>

@@ -1,0 +1,60 @@
+pt-BR:
+  company:
+    new:
+      title: Informações sobre a Empresa
+    show:
+      title: "Empresa - %{name}"
+  admin:
+    new:
+      title: Informações sobre Administrador/Dono
+
+  button:
+    save: Salvar
+  links:
+    back: Voltar
+    home: Página Inicial
+    show: Mostrar
+    edit: Editar
+    delete: Apagar
+    report: Relatório
+    records: Cadastros
+    new_empresa: Nova Empresa
+    list_empresas: Todas Empresas
+    new_equipe: Nova Equipe
+    list_equipes: Todas Equipes
+    new_funcionario: Novo Funcionario
+    list_funcionarios: Todos Funcionarios
+    new_localizacao: Nova Localização
+    list_localizacaos: Todas Localizações
+
+  message:
+    are_you_sure: Você tem certeza?
+    form_error: 'Infelizmente não foi possível completar a ação, pois o formulário possui os seguintes erros:'
+
+  table:
+    edit: Editar
+    show: Visualizar
+    delete: Apagar
+
+  title:
+    edit: "Editar - %{model}"
+    add_company: "Cadastro Empresa"
+
+  activerecord:
+    models:
+      admin: Administrador
+      company: Empresa
+
+    attributes:
+      admin:
+        email: "E-mail:"
+        password: "Senha:"
+        password_confirmation: "Confirme a senha:"
+
+      company:
+        name: "Nome:"
+        address: "Nome da Rua/Av:"
+        number: "Número:"
+        cep: "CEP:"
+        cnpj: "CNPJ:"
+        phone: "Telefone:"

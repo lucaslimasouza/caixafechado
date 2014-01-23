@@ -1,0 +1,28 @@
+$error-text-color: #B94A48;
+$serif-families: 'Emblema One', cursive;
+
+@mixin shadow($color,$x, $y, $radius) {
+	-moz-box-shadow: $color $x $y $radius;
+	-webkit-box-shadow: $color $x $y $radius;
+	box-shadow: $color $x $y $radius;
+}
+
+.field_with_errors {
+	display: inline;
+	label { color: $error-text-color; }
+		input[type=text], input[type=password], textarea {
+		border: 1px solid rgba(189,74,72, 0.5);
+		@include shadow(rgba(189,74,72, 0.2), 0px, 0px, 8px);
+		&:focus { border: 1px solid rgba(189,74,72, 0.6); }
+		}
+	}
+.error_message {
+	margin-left: 5px;
+	display: inline;
+	color: $error-text-color;
+}
+
+.home-page-title{
+	color: #036;
+	font-family: $serif-families;
+}

@@ -1,18 +1,59 @@
-<h2>Sign up</h2>
+<div class="padding white">
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <div class="row-fluid">
+		<div class="box-title-add">
+			<h2 class="center"> <%= t 'title.add_company' %> </h2>
+		</div>
+	</div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+<!-- BEGIN BLOCK FORM COMPANY -->
+  <div class="box-create-company">
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <fieldset>
+      <legend class="span12 alert alert-success"><%= t'company.new.title' %></legend>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+		  
+		  <%= f.fields_for :company do |company_form| %>
+		  	<%= render 'company_form', f: company_form %>
+		  <% end %>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+  	</fieldset>
 
-<%= render "admins/shared/links" %>
+  </div>
+  <!-- END BLOCK COMPANY -->
+
+  <div class="box-create-admin">
+
+  <fieldset>
+      <legend  class="span12 alert alert-info"><%= t 'admin.new.title' %></legend>
+
+		  <p>
+		  	<%= f.label :email %>
+		  	<%= f.email_field :email %>
+		  	<%= error_tag resource, :email %>
+		  </p>
+
+		  <p>
+			  <%= f.label :password %>
+			  <%= f.password_field :password %>
+			  <%= error_tag resource, :password %>
+		  </p>
+
+		  <p>
+			  <%= f.label :password_confirmation %>
+			  <%= f.password_field :password_confirmation %>
+			  <%= error_tag resource, :password_confirmation %>
+		  </p>
+
+      <div class="form-actions">
+        <%= f.submit t('button.save'), class: "btn btn-info" %>
+      </div>
+
+    <% end %><!-- END MAIN FORM ADMIN -->
+
+    </fieldset>
+  </div>
+
+      <%= render "admins/shared/links" %>
+</div>
