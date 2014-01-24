@@ -1,34 +1,48 @@
-<p id="notice"><%= notice %></p>
+<div class="padding white">
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
+  <div class="row-fluid">
+    <div class="box-title-add">
+      <h2 class="center"> <%=t 'company.show.title', name: @company.name %></h2>
+    </div>
+  </div>
 
-<p>
-  <strong>Cnpj:</strong>
-  <%= @company.cnpj %>
-</p>
+  <div class="row-fluid">
+    <div class="span12 alert alert-success">
+      <p >
+        <strong><%= t'activerecord.attributes.company.name'%></strong>
+        <%= @company.name %>
+      </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @company.phone %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.company.cnpj'%></strong>
+        <%= @company.cnpj %>
+      </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @company.address %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.company.phone'%></strong>
+        <%= @company.phone %>
+      </p>
 
-<p>
-  <strong>Number:</strong>
-  <%= @company.number %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.company.address'%></strong>
+        <%= @company.address %>
+      </p>
 
-<p>
-  <strong>Cep:</strong>
-  <%= @company.cep %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.company.number'%></strong>
+        <%= @company.number %>
+      </p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+      <p>
+        <strong><%= t'activerecord.attributes.company.cep'%></strong>
+        <%= @company.cep %>
+      </p>
+    </div>
+  </div>
+
+ <div class="form-actions">
+  <%= link_to t('links.edit'), edit_company_path(@company) %> |
+  <%= link_to t('links.back'), companies_path %>
+</div>
+
+</div>

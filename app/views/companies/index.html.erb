@@ -1,37 +1,47 @@
-<h1>Listing companies</h1>
+<div class="span12 white padding">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Cnpj</th>
-      <th>Phone</th>
-      <th>Address</th>
-      <th>Number</th>
-      <th>Cep</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <fieldset>
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.cnpj %></td>
-        <td><%= company.phone %></td>
-        <td><%= company.address %></td>
-        <td><%= company.number %></td>
-        <td><%= company.cep %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="row-fluid">
+      <div class="box-title-add">
+        <h2 class="center"> <%=t 'company.index.title' %></h2>
+      </div>
+    </div>
 
-<br>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t'activerecord.attributes.company.name'%></th>
+          <th><%= t'activerecord.attributes.company.cnpj'%></th>
+          <th><%= t'activerecord.attributes.company.phone'%></th>
+          <th><%= t'activerecord.attributes.company.address'%></th>
+          <th><%= t'activerecord.attributes.company.number'%></th>
+          <th><%= t'activerecord.attributes.company.cep'%></th>
+          <th><%= t'table.show'%></th>
+          <th><%= t'table.edit'%></th>
+          <th><%= t'table.delete'%></th>
+        </tr>
+      </thead>
 
-<%= link_to 'New Company', new_company_path %>
+      <tbody>
+        <% @companies.each do |company| %>
+          <tr>
+            <td><%= company.name %></td>
+            <td><%= company.cnpj %></td>
+            <td><%= company.phone %></td>
+            <td><%= company.address %></td>
+            <td><%= company.number %></td>
+            <td><%= company.cep %></td>
+            <td><%= link_to image_tag("/imgs/icons/show_icon.png"), company %></td>
+            <td><%= link_to image_tag("/imgs/icons/edit_icon.png"), edit_company_path(company) %></td>
+            <td><%= link_to image_tag("/imgs/icons/delete_icon.png"), company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+    
+      </tbody>
+    
+    </table>
+
+  </fieldset>
+
+</div>

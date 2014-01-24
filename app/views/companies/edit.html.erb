@@ -1,6 +1,26 @@
-<h1>Editing company</h1>
+<div class="span12 white padding">
 
-<%= render 'form' %>
+	  <div class="row-fluid">
+    <div class="box-title-add">
+      <h2 class="center"> <%=t 'title.edit', model: @company.name %></h2>
+    </div>
+  </div>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+<!-- BEGIN BLOCK FORM COMPANY -->
+  <div class="box-create-company">
+
+    <fieldset>
+      <legend class="span12 alert alert-success"><%= t'company.new.title' %></legend>
+
+			<%= render 'form' %>
+
+		</fieldset>
+
+  </div>
+
+  <div class="form-actions">
+		<%= link_to t('links.show'), @company %> |
+		<%= link_to t('links.back'), companies_path %>
+	</div>
+
+</div>
