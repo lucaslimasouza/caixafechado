@@ -41,7 +41,7 @@ pt-BR:
 
   title:
     edit: "Editar - %{model}"
-    add_company: "Cadastro Empresa"
+    add_company: "Cadastro - Estabelecimento"
 
   activerecord:
     models:
