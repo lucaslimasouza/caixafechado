@@ -48,3 +48,14 @@
 	border-right: 1px solid #fbeed5;
 	border-left: 1px solid #fbeed5;
 }
+
+
+/* Featurettes
+------------------------- */
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-top:10%;
+}
