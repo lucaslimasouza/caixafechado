@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caixa Objetivo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body >
+
+<%= render '/layouts/head_home' %>
+
+<%= render '/layouts/marketing_home' %>
+           
+
+        <%= yield %>
+
+
+      <hr>
+
+       <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+
+
+
+
+</body>
+</html>

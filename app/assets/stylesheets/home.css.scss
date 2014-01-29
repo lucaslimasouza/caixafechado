@@ -1,3 +1,40 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.back-image{
+	background-image: url("/imgs/background-image.jpg");
+	background-repet: no-repeat;
+	background_position: 50% top;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+	color: #fff;
+	text-shadow: 2px -2px #000;
+}
+.jumbotron h1 {
+  line-height: 1;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+.jumbotron .lead {
+  font-size: 2em;
+  line-height: 1.25;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 5% 0;
+}
+.marketing p + h4 {
+  margin-top: 5%;
+}
+
+.box-marketing{
+	margin-top: 6%;
+	margin-bottom: 6%;
+}
