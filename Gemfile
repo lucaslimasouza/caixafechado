@@ -41,7 +41,6 @@ gem 'devise'
 
 
 group :development, :test do
-	gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'shoulda-matchers'
   gem "shoulda-callback-matchers", ">=0.3.0"
