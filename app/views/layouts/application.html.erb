@@ -21,12 +21,14 @@
       
       <% if flash[:notice].present? %>
         <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
           <p id="notice"><%= flash[:notice] %> </p>
         </div>
       <% end %>
         
       <% if alert.present? %>
         <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
           <p id="alert"><%= alert %> </p>
         </div>
       <% end %>

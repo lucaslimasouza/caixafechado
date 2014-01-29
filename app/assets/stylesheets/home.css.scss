@@ -39,10 +39,12 @@
 	margin-bottom: 6%;
 }
 
-.box-title-active{	
-	background-color: #333;
-	color: #fff;
-	margin-bottom: 3%;
+.box-active{
+	margin-top:3%;
 	padding: 1%;
 }
 
+.border-sides{
+	border-right: 1px solid #fbeed5;
+	border-left: 1px solid #fbeed5;
+}
