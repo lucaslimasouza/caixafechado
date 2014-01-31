@@ -13,6 +13,7 @@ pt-BR:
   button:
     save: Salvar
     edit: Salvar as Modificações
+    registre_admin_now: Comece agora
   links:
     back: Voltar
     home: Página Inicial
@@ -47,6 +48,7 @@ pt-BR:
       in_out_subtitle: "Registre suas vendas, compras e despesas, no momento em que elas acontece. E tenha total domínio sobre o direcionamento do seu dinheiro."
       report_title: "Acompanhe o fluxo do seu Caixa"
       report_subtitle: "Visualize e gerencie toda movimentação de dinheiro presente no seu caixa, com gráficos e informações que agregam valor ao seu negócio, há qualquer lugar e momento."
+    
     marketing:
       manager_title: "Não há milagres."
       manager_title_two: " você sabe."
@@ -74,7 +76,7 @@ pt-BR:
 
   devise:
     sign_in: Entrar
-    sign_up: "Cadastrar gratuitamente agora!"
+    sign_up: "Cadastre-se gratuitamente agora!"
     forgot_password: Esqueceu sua senha?
 
   activerecord:
