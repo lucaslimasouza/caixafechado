@@ -70,6 +70,12 @@ pt-BR:
   title:
     edit: "Editar - %{model}"
     add_company: "Cadastro - Estabelecimento"
+    sign_in: Entrar no Caixa Objetivo
+
+  devise:
+    sign_in: Entrar
+    sign_up: "Cadastrar gratuitamente agora!"
+    forgot_password: Esqueceu sua senha?
 
   activerecord:
     models:
