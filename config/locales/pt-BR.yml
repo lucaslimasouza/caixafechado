@@ -18,17 +18,45 @@ pt-BR:
     home: Página Inicial
     show: Mostrar
     edit: Editar
+    sign_in: Entrar
     delete: Apagar
     report: Relatório
     records: Cadastros
     new_empresa: Nova Empresa
     list_empresas: Todas Empresas
-    new_equipe: Nova Equipe
-    list_equipes: Todas Equipes
-    new_funcionario: Novo Funcionario
-    list_funcionarios: Todos Funcionarios
-    new_localizacao: Nova Localização
-    list_localizacaos: Todas Localizações
+
+  footer:
+    top: Voltar para o topo
+    right: Caixa Objetivo 2013
+
+  head:
+    menu:
+      home: Ínicio
+      how_works: Como funciona
+      benefits: Benefícios
+      plan: Planos
+      contact: Contato
+
+  text:
+    marketing_title: "sistema para Controle de Caixa de modo:"
+    marketing_subtitle: "seguro, eficiente, simples e objetivo."
+    box_active:
+      products_title: Cadastre seu produtos
+      products_subtitle: "Insira os dados sobre seus produtos como nome, valor de custo, valor de venda e quantidade para ter total controle   sobre seu estoque."
+      in_out_title: "Registre as entradas e saídas"
+      in_out_subtitle: "Registre suas vendas, compras e despesas, no momento em que elas acontece. E tenha total domínio sobre o direcionamento do seu dinheiro."
+      report_title: "Acompanhe o fluxo do seu Caixa"
+      report_subtitle: "Visualize e gerencie toda movimentação de dinheiro presente no seu caixa, com gráficos e informações que agregam valor ao seu negócio, há qualquer lugar e momento."
+    marketing:
+      manager_title: "Não há milagres."
+      manager_title_two: " você sabe."
+      manager_subtitle: "Para obter lucro é necessário administrar o dinheiro que passa a todo momento pelo seu caixa."
+      solution_title: "Caixa Objetivo vai lhe ajudar."
+      solution_title_two: " é só cadastrar."
+      solution_subtitle: "Solução ideal para controlar o fluxo de seu caixa e ajudar na sua gestão."
+      free_title: "Primeiro mês grátis."
+      free_title_two: " é isso mesmo."
+      free_subtitle: "Para você conhecer o melhor do Caixa Objetivo. Depois só pagará 29,90 por mês."
 
   message:
     are_you_sure: Você tem certeza?

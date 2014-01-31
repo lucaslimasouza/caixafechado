@@ -8,11 +8,7 @@
 </head>
 <body>
 
-<div class="row-fluid">
-  <div class="span12">
-    <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>
-  </div>
-</div>
+<%= render '/layouts/head_home' %>
 
 <div class="container-fluid">
   <div class="row-fluid">
@@ -54,7 +50,14 @@
 
     </div>
     <!-- FIM ROW -->  
-  </div
+  </div>
+
+<hr>
+
+ <div class="footer">
+ <p class="pull-right"><a href="#">Voltar para o topo</a></p>
+  <p>&copy; Caixa Objetivo 2013</p>
+</div>
 
 </body>
 </html>

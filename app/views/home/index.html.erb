@@ -1,36 +1,35 @@
-<div class="row-fluid">
+<div class="row-fluid"> <!-- BEGIN THE BOXS ACTIVE -->
 
 	<div class="span4 center box-active">
 
-		<h4 class="alert">Cadastre seu produtos</h4>
+		<h4 class="alert"><%= t'text.box_active.products_title' %></h4>
 		<%= image_tag("/imgs/products.png", class: "img-polaroid margin")%>
 		<p class="margin">
-			Insira os dados sobre seus produtos como nome, valor de custo, 
-			valor de venda e quantidade para ter total controle 	sobre seu estoque.
+		<%= t'text.box_active.products_subtitle' %>
 		</p>
 	</div>
 
 	<div class="span4 center box-active border-sides">
 
-		<h4 class="alert">Registre as entradas e saídas</h4>
+		<h4 class="alert"><%= t'text.box_active.in_out_title' %></h4>
 		<%= image_tag("/imgs/in_out.png", class: "img-polaroid margin")%>
 		<p class="margin">
-			Registre suas vendas, compras e despesas, no momento em que elas acontece. E tenha total domínio sobre o direcionamento do seu dinheiro.
+			<%= t'text.box_active.in_out_subtitle' %>
 		</p>
 
 	</div>
 
 	<div class="span4 center box-active">
 
-		<h4 class="alert">Acompanhe o fluxo do seu Caixa</h4>
+		<h4 class="alert"><%= t'text.box_active.report_title' %></h4>
 		<%= image_tag("/imgs/reports.png", class: "img-polaroid margin") %> 
 		<p class="margin">
-			Visualize e gerencie toda movimentação de dinheiro presente no seu caixa, com gráficos e informações que agregam valor ao seu negócio, há qualquer lugar e momento.
+			<%= t'text.box_active.report_subtitle' %>
 		</p>
 
 	</div>
 
-</div>
+</div> <!-- END THE BOXS ACTIVE -->
 
 <hr/>
 <!-- START THE FEATURETTES -->
@@ -38,8 +37,8 @@
 
 
 	<div class="span7">
-	  <h2 class="featurette-heading alert alert-info">Não há milagres. <span class="muted">você sabe.</span></h2>
-	  <p class="lead">Para obter lucro é necessário administrar o dinheiro que passa a todo momento pelo seu caixa.</p>
+	  <h3 class="featurette-heading alert alert-info"><%= t'text.marketing.manager_title' %> <span class="muted"><%= t'text.marketing.manager_title_two' %></span></h3>
+	  <p class="lead"><%= t'text.marketing.manager_subtitle' %></p>
 	</div>
 
 	<div class="span5">
@@ -57,8 +56,8 @@
 	</div>
 
 	<div class="span7 ">
-	  <h2 class="pull-right featurette-heading alert">Caixa Objetivo vai lhe ajudar. <span class="muted">É só cadastrar.</span></h2>
-	  <p class="lead pull-right">Solução ideal para controlar o fluxo de seu caixa e ajudar na sua gestão.</p>
+	  <h3 class="pull-right featurette-heading alert"><%= t'text.marketing.solution_title' %> <span class="muted"><%= t'text.marketing.solution_title_two'%></span></h3>
+	  <p class="lead pull-right"><%= t'text.marketing.solution_subtitle'%></p>
 	</div>
 
 </div>
@@ -69,8 +68,8 @@
 
 
 	<div class="span7">
-	  <h2 class="featurette-heading alert alert-success"> Primeiro mês grátis. <span class="muted">É isso mesmo.</span></h2>
-	  <p class="lead">Para você conhecer o melhor do Caixa Objetivo. Depois só pagará 29,90 por mês.</p>
+	  <h3 class="featurette-heading alert alert-success"><%= t'text.marketing.free_title' %> <span class="muted"><%= t'text.marketing.free_title_two'%></span></h3>
+	  <p class="lead"><%= t'text.marketing.free_subtitle' %></p>
 	</div>
 
 	<div class="span5">

@@ -17,15 +17,15 @@
 
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">início</a></li>
-              <li><a href="#contact">Como funciona</a></li>
-              <li><a href="#contact">Benefícios</a></li>
-              <li><a href="#contact">Planos</a></li>
-              <li><a href="#contact">Contato</a></li>
+              <li class="active"><%= link_to t'head.menu.home' %></li>
+              <li><%= link_to t'head.menu.how_works' %></li>
+              <li><%= link_to t'head.menu.benefits' %></li>
+              <li><%= link_to t'head.menu.plan' %></li>
+              <li><%= link_to t'head.menu.contact' %></li>
             </ul>
           </div><!--/.nav-collapse -->
 
-          <a class="btn btn-primary" href="#">Entrar</a>
+          <%= link_to t('links.sign_in'), new_admin_session_path, class: "btn btn-primary" %>
         </div>
 
       </div><!-- /row -->
