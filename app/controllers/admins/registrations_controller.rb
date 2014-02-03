@@ -29,6 +29,10 @@ class Admins::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+   def after_sign_up_path_for(resource)
+    painel_main_index_path
+  end
+
 
   def sign_up_params
     params.

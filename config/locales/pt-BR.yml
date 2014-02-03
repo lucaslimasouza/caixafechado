@@ -9,6 +9,9 @@ pt-BR:
   admin:
     new:
       title: Informações sobre Administrador/Dono
+  
+  painel_main:
+    title: Painel Principal
 
   button:
     save: Salvar
@@ -78,6 +81,7 @@ pt-BR:
     sign_in: Entrar
     sign_up: "Cadastre-se gratuitamente agora!"
     forgot_password: Esqueceu sua senha?
+    send_new_pass: "Me enviar instruções para uma nova senha"
 
   activerecord:
     models:

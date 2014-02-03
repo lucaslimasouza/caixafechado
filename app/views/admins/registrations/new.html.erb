@@ -6,13 +6,14 @@
 		</div>
 	</div>
 
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
 <!-- BEGIN BLOCK FORM COMPANY -->
   <div class="box-create-company">
 
     <fieldset>
       <legend class="span12 alert alert-success"><%= t'company.new.title' %></legend>
 
-		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  
 		  <%= f.fields_for :company do |company_form| %>
 		  	<%= render 'company_form', f: company_form %>
@@ -50,9 +51,9 @@
         <%= f.submit t('button.save'), class: "btn btn-info" %>
       </div>
 
-    <% end %><!-- END MAIN FORM ADMIN -->
-
     </fieldset>
   </div>
+
+  <% end %><!-- END MAIN FORM ADMIN -->
 
 </div>
