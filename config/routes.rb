@@ -1,5 +1,7 @@
 Caixafechado::Application.routes.draw do
   
+  resources :products
+
   get "painel_main/index"
   get "home/index"
   devise_for :admins, controllers: {registrations: "admins/registrations"}

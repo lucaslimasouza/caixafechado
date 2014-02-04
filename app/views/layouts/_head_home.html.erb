@@ -25,7 +25,11 @@
             </ul>
           </div><!--/.nav-collapse -->
 
-          <%= link_to t('links.sign_in'), new_admin_session_path, class: "btn btn-primary" %>
+          <% if admin_signed_in? %>
+            <%= link_to t('links.sign_out'), destroy_admin_session_path, class: "btn btn-danger" %>
+          <% else %>
+            <%= link_to t('links.sign_in'), new_admin_session_path, class: "btn btn-primary" %>
+          <% end %>
         </div>
 
       </div><!-- /row -->
