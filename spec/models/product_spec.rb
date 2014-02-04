@@ -20,6 +20,13 @@ describe Product do
   	it { should validate_presence_of(:quantity) }
   end
 
+  context 'validate numecality' do
+    it { should validate_numericality_of(:code) }
+    it { should validate_numericality_of(:cost) }
+    it { should validate_numericality_of(:price) }
+    it { should validate_numericality_of(:quantity) }
+  end
+
   context 'association' do
   	it { should belong_to(:company) }
   end
