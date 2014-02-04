@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Company do
 
   context "association" do
-    it { should belong_to(:admin)}
+    it { should belong_to(:admin) }
+    it { should have_many(:products) }
   end
 
   context "attributes" do
@@ -29,4 +30,5 @@ describe Company do
   	it { should validate_numericality_of(:cep) }
   	it { should validate_numericality_of(:cnpj) }
   end
+
 end

@@ -20,4 +20,8 @@ describe Product do
   	it { should validate_presence_of(:quantity) }
   end
 
+  context 'association' do
+  	it { should belong_to(:company) }
+  end
+
 end
