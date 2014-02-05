@@ -14,6 +14,8 @@ pt-BR:
   product:
     index:
       title: "Produtos no estoque"
+    new:
+      title: Informações sobre o Produto
   
   painel_main:
     title: Painel Principal
@@ -82,6 +84,7 @@ pt-BR:
   title:
     edit: "Editar - %{model}"
     add_company: "Cadastro - Estabelecimento"
+    add_product: "Cadastro - Produto"
     sign_in: Entrar no Caixa Objetivo
 
   devise:

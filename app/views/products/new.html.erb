@@ -1,5 +1,25 @@
-<h1>New product</h1>
+<div class="padding white">
 
-<%= render 'form' %>
+  <div class="row-fluid">
+		<div class="box-title-add">
+			<h2 class="center"> <%= t 'title.add_product' %> </h2>
+		</div>
+	</div>
 
-<%= link_to 'Back', products_path %>
+	<!-- BEGIN BLOCK FORM COMPANY -->
+  <div class="box-create-product">
+
+    <fieldset>
+      <legend class="span12 alert alert-success"><%= t'product.new.title' %></legend>
+
+			<%= render 'form' %>
+
+			<div class="form-actions"> 
+				
+			</div>
+
+		</fieldset>
+
+	</div>
+
+</div>

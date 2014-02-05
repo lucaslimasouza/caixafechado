@@ -1,41 +1,36 @@
 <%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-      <% @product.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :code %><br>
+  <p class="field">
+    <%= f.label :code %>
     <%= f.text_field :code %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
+    <%= error_tag @product, :code %>
+  </p>
+  <p class="field">
+    <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :cost %><br>
+    <%= error_tag @product, :name %>
+  </p>
+  <p class="field">
+    <%= f.label :cost %>
     <%= f.text_field :cost %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
+    <%= error_tag @product, :cost %>
+  </p>
+  <p class="field">
+    <%= f.label :price %>
     <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :quantity %><br>
+    <%= error_tag @product, :price %>
+  </p>
+  <p class="field">
+    <%= f.label :quantity %>
     <%= f.text_field :quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+    <%= error_tag @product, :quantity %>
+  </p>
+  <p class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <%= error_tag @product, :description %>
+  </p>
+  <div class="form-actions">
+    <%= f.submit t('button.save'), class: "btn btn-info" %>
   </div>
 <% end %>
