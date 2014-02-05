@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_filter :authenticate_admin!
 
   def index
-    @products = Product.all
+    @products = current_admin.company.products
     respond_with(@products)
   end
 
@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+    @product = current_admin.company.products.build
     respond_with(@product)
   end
 
@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
+    @product = current_admin.company.products.build(product_params)
     @product.save
     respond_with(@product)
   end
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
 
   private
     def set_product
-      @product = Product.find(params[:id])
+      @product = current_admin.company.products.find(params[:id])
     end
 
     def product_params

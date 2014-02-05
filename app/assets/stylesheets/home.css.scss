@@ -5,7 +5,7 @@
 .back-image{
 	background-image: url("/imgs/background-image.jpg");
 	background-repet: no-repeat;
-	background_position: 50% top;
+
 }
 
 /* Main marketing message and sign up button */
@@ -35,7 +35,8 @@
 }
 
 .box-marketing{
-	margin-top: 6%;
+	/*margin-top: 6%;*/
+	padding-top: 10%;
 	margin-bottom: 6%;
 }
 
