@@ -4,33 +4,45 @@
 
       <div class="row-fluid"> 
 
-        <div class="span7">
+        <div class="span6">
           <%= link_to image_tag("/imgs/brand2.png"), root_path, class: "brand" %>
         </div>
 
-        <div class="span5 pull-right">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <div class="span6 "> <!--BEFGIN MENU AND BUTTON -->
 
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><%= link_to t('head.menu.home'), root_path %></li>
-              <li><%= link_to t'head.menu.how_works' %></li>
-              <li><%= link_to t'head.menu.benefits' %></li>
-              <li><%= link_to t'head.menu.plan' %></li>
-              <li><%= link_to t'head.menu.contact' %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          <div class="span10">
 
-          <% if admin_signed_in? %>
-            <%= link_to t('links.sign_out'), destroy_admin_session_path, class: "btn btn-danger" %>
-          <% else %>
-            <%= link_to t('links.sign_in'), new_admin_session_path, class: "btn btn-primary" %>
-          <% end %>
-        </div>
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="nav-collapse collapse"><!--BEGIN.nav-collapse -->
+              <ul class="nav">
+                <li class="active"><%= link_to t('head.menu.home'), root_path %></li>
+                <li><%= link_to t'head.menu.how_works' %></li>
+                <li><%= link_to t'head.menu.benefits' %></li>
+                <li><%= link_to t'head.menu.plan' %></li>
+                <li><%= link_to t'head.menu.contact' %></li>
+                <li>
+                  
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+
+          </div>
+          
+          <div class="span2 pull-right">  <!--BEGIN BUTTON -->
+            <% if admin_signed_in? %>
+              <%= link_to t('links.sign_out'), destroy_admin_session_path, class: "btn btn-danger" %>
+            <% else %>
+              <%= link_to t('links.sign_in'), new_admin_session_path, class: "btn btn-primary" %>
+            <% end %>  
+          </div>  <!--END BUTTON -->
+          
+
+        </div> <!--END MENU AND BUTTON -->
 
       </div><!-- /row -->
 
