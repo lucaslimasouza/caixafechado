@@ -1,37 +1,49 @@
-<h1>Listing products</h1>
+<div class="span12 white padding">
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Cost</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <fieldset>
 
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.code %></td>
-        <td><%= product.name %></td>
-        <td><%= product.cost %></td>
-        <td><%= product.price %></td>
-        <td><%= product.quantity %></td>
-        <td><%= product.description %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="row-fluid">
+      <div class="box-title-add">
+        <h2 class="center"> <%=t 'product.index.title' %></h2>
+      </div>
+    </div>
 
-<br>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t'activerecord.attributes.product.code'%></th>
+          <th><%= t'activerecord.attributes.product.name'%></th>
+          <th><%= t'activerecord.attributes.product.cost'%></th>
+          <th><%= t'activerecord.attributes.product.price'%></th>
+          <th><%= t'activerecord.attributes.product.quantity'%></th>
+          <th><%= t'activerecord.attributes.product.description'%></th>
+          <th><%= t'table.show'%></th>
+          <th><%= t'table.edit'%></th>
+          <th><%= t'table.delete'%></th>
+        </tr>
+      </thead>
 
-<%= link_to 'New Product', new_product_path %>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.code %></td>
+            <td><%= product.name %></td>
+            <td><%= product.cost %></td>
+            <td><%= product.price %></td>
+            <td><%= product.quantity %></td>
+            <td><%= product.description %></td>
+            <td><%= link_to image_tag("/imgs/icons/show_icon.png"), product %></td>
+            <td><%= link_to image_tag("/imgs/icons/edit_icon.png"), edit_product_path(product) %></td>
+            <td><%= link_to image_tag("/imgs/icons/delete_icon.png"), product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <div class="form-actions">
+      <%= link_to t('button.new_product'), new_product_path, class: "btn btn-info" %>
+    </div>
+
+</fieldset>
+
+</div>

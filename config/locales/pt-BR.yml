@@ -5,10 +5,15 @@ pt-BR:
     show:
       title: "Dados do Estabelecimento - %{name}"
     index:
-        title: "Estabelecimentos Cadastradros"
+      title: "Estabelecimentos Cadastradros"
+  
   admin:
     new:
       title: Informações sobre Administrador/Dono
+  
+  product:
+    index:
+      title: "Produtos no estoque"
   
   painel_main:
     title: Painel Principal
@@ -17,6 +22,7 @@ pt-BR:
     save: Salvar
     edit: Salvar as Modificações
     registre_admin_now: Cadastre-se agora
+    new_product: Cadastrar Produto
   links:
     back: Voltar
     home: Página Inicial
@@ -88,6 +94,7 @@ pt-BR:
     models:
       admin: Administrador
       company: Estabelecimento
+      product: Produto
 
     attributes:
       admin:
@@ -102,3 +109,13 @@ pt-BR:
         cep: "CEP:"
         cnpj: "CNPJ:"
         phone: "Telefone:"
+
+      product:
+        code: "Código:"
+        name: "Nome:"
+        cost: "Preço de custo:"
+        price: "Preço de Venda:"
+        description: "Descrição:"
+        quantity: "Quantidade:"
+
+
