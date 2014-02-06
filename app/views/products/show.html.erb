@@ -1,34 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="padding white">
 
-<p>
-  <strong>Code:</strong>
-  <%= @product.code %>
-</p>
+  <div class="row-fluid">
+    <div class="box-title-add">
+      <h2 class="center"> <%=t 'product.show.title', name: @product.name %></h2>
+    </div>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <div class="row-fluid">
+    <div class="span12 alert alert-success">
 
-<p>
-  <strong>Cost:</strong>
-  <%= @product.cost %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.product.code'%></strong>
+        <%= @product.code %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.product.name'%></strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.product.cost'%></strong>
+        <%= @product.cost %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <p>
+        <strong><%= t'activerecord.attributes.product.price'%></strong>
+        <%= @product.price %>
+      </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <p>
+        <strong><%= t'activerecord.attributes.product.quantity'%></strong>
+        <%= @product.quantity %>
+      </p>
+
+      <p>
+        <strong><%= t'activerecord.attributes.product.description'%></strong>
+        <%= @product.description %>
+      </p>
+
+      <div class="form-actions">
+        <%= link_to t('links.edit'), edit_product_path(@product) %> |
+        <%= link_to t('links.back'), products_path %>
+      </div>
+    </div>
+  </div>
+
+</div>

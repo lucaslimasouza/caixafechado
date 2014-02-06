@@ -16,6 +16,8 @@ pt-BR:
       title: "Produtos no estoque"
     new:
       title: Informações sobre o Produto
+    show:
+      title: "Dados do Produto - %{name}"
   
   painel_main:
     title: Painel Principal

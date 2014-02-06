@@ -1,6 +1,27 @@
-<h1>Editing product</h1>
+<div class="span12 white padding">
 
-<%= render 'form' %>
+	  <div class="row-fluid">
+    <div class="box-title-add">
+      <h2 class="center"> <%=t 'title.edit', model: @product.name %></h2>
+    </div>
+  </div>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+  <!-- BEGIN BLOCK FORM COMPANY -->
+  <div class="box-create-company">
+
+    <fieldset>
+      <legend class="span12 alert alert-success"><%= t'product.new.title' %></legend>
+
+			<%= render 'form' %>
+
+		</fieldset>
+
+  </div>
+
+  <div class="form-actions">
+		<%= link_to t('links.show'), @product %> |
+		<%= link_to t('links.back'), products_path %>
+	</div>
+
+</div>
+
