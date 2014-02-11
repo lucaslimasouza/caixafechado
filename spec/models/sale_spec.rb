@@ -1,0 +1,10 @@
+require 'spec_helper'
+
+describe Sale do
+  context 'attributes' do
+  	it { should respond_to(:change) }
+  	it { should respond_to(:value_received) }
+  	it { should respond_to(:total) }
+  	
+  end
+end
