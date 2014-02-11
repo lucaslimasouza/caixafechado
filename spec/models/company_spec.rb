@@ -5,6 +5,7 @@ describe Company do
   context "association" do
     it { should belong_to(:admin) }
     it { should have_many(:products) }
+    it { should have_many(:sales) }
   end
 
   context "attributes" do
