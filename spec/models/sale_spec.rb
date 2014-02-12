@@ -10,5 +10,6 @@ describe Sale do
 
   context 'associations' do
   	it { should belong_to(:company) }
+  	it { should have_and_belong_to_many(:products) }
   end
 end
