@@ -2,6 +2,11 @@ Caixafechado::Application.routes.draw do
   
   resources :products
 
+  resources :sales do
+    member do
+      get :add_products
+    end
+  end
   get "sales/add_products"
   get "painel_main/index"
   get "home/index"
