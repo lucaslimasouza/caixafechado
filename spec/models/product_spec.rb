@@ -29,6 +29,7 @@ describe Product do
 
   context 'association' do
   	it { should belong_to(:company) }
+    it { should have_and_belong_to_many(:sales) }
   end
 
 end
