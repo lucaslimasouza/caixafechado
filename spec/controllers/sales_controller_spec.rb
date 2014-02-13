@@ -18,7 +18,7 @@ describe SalesController do
 	  			subject.should redirect_to new_sale_path
 	  	end
 
-			it "should have one product on sale admin_session" do
+			it "should have one product on sale admin" do
 				get :add_products, id: product.id
 
 				expect(sale_on_session.products.size).to be_equal 1				
@@ -26,10 +26,20 @@ describe SalesController do
 
 			it "should not overwrite some product added" do
 				get :add_products, id: product.id
-				get :add_products, id: second_product
+				get :add_products, id: second_product.id
 
 				expect(sale_on_session.products.size).to be_equal 2 
 			end
+
+	  end
+
+	  context '#cancel_products' do
+	  	
+	  	it "should redirect to edit tamplete"
+
+	  	it "should have anyone product on sale admin"
+
+	  	it "should have only one product on sale admin"
 	  end
 	end
 
