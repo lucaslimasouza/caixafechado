@@ -18,6 +18,13 @@ describe SalesController do
 
 				expect(subject.admin_session[:sale].products.size).to be_equal 1				
 			end
+
+			it "should not overwrite some product added" do
+				get :add_products, id: 1
+				get :add_products, id: 2
+
+				expect(subject.admin_session[:sale].products.size).to be_equal 2 
+			end
 	  end
 	end
 
