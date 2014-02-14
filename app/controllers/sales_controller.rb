@@ -7,6 +7,10 @@ class SalesController < ApplicationController
 		redirect_to new_sale_path
 	end
 
+	def new
+
+	end
+
 	private
 	def initialize_sale_on_session
 		admin_session[:sale].present? ? 

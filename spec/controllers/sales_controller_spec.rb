@@ -34,12 +34,20 @@ describe SalesController do
 	  end
 
 	  context '#cancel_products' do
-	  	
+
 	  	it "should redirect to edit tamplete"
 
 	  	it "should have anyone product on sale admin"
 
 	  	it "should have only one product on sale admin"
+	  end
+
+	  context '#new' do
+	  	it "should have templete new" do
+	  		get :new
+
+	  		subject.should render_template :new
+	  	end
 	  end
 	end
 
