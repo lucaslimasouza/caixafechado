@@ -44,14 +44,13 @@ describe Product do
   end
 
   context '#search' do
-    it "should return product by code" do
-      product = create(:product) 
-      
-      expect(Product.search(product.code).first.code).to be_eql(product.code)
+    before(:each) { @product = create(:product) }
+
+    it "should return product by code" do      
+      expect(Product.search(@product.code).first.code).to be_eql(@product.code)
     end
 
     it "should return all products when code is nill" do
-      product = create(:product)
       second_product = create(:product)
 
       expect(Product.search("").size).to be_eql 2
