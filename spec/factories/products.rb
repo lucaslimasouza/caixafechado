@@ -3,7 +3,7 @@
 FactoryGirl.define do
 
   factory :product do
-		code 12344567
+		code "12344567"
 		name 'Bala' 
 		cost 0.05 
 		price 0.10

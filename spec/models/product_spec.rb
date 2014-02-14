@@ -40,6 +40,13 @@ describe Product do
       product.save
       expect(Product.from(company).first.company).to be_eql company
     end
+
+    it "should return product by code" do
+      product = create(:product) 
+      
+      expect(Product.search(product.code).first.code).to be_eql(product.code)
+    end
+
   end
 
 end

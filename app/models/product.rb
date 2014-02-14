@@ -7,4 +7,9 @@ class Product < ActiveRecord::Base
 	validates_numericality_of :code, :cost, :price, :quantity
 
 	scope :from, -> company { where(company: company) }
+
+	def self.search(code)
+		where(code: "#{code}")	
+	end
+
 end
