@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
 	scope :from, -> company { where(company: company) }
 
 	def self.search(code)
-		code.present? ? where(code: "#{code}") : all
+		where(code: "#{code}")
 	end
 
 end
