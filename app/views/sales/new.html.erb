@@ -1,1 +1,50 @@
-<h1> Caixa</h1>
+<div class="padding white">
+	<h1> Caixa - Quantidade de Produtos: <%= if admin_session[:sale].present? then admin_session[:sale].products.size end %></h1>
+
+	<div class="row-fluid">
+		<%= form_tag new_sale_path, method: :get, class: 'alert alert-block center' do %>
+			<p>
+				<%= text_field_tag :q, @search_code, placeholder: 'insira o código'%>
+				<%= hidden_field_tag :redirect, true %>
+			</p>
+			<p>
+				<%= submit_tag 'Buscar', name: nil, class: 'btn' %>
+			</p>
+		<% end %>
+	</div>
+
+<% if @product.present? then %>
+	
+	<div class="row-fluid">
+		<div class="span12 alert alert-success">
+
+			<p>
+			  <strong><%= t'activerecord.attributes.product.code'%></strong>
+			  <%= @product.code %>
+			</p>
+
+			<p>
+			  <strong><%= t'activerecord.attributes.product.name'%></strong>
+			  <%= @product.name %>
+			</p>
+
+			<p>
+			  <strong><%= t'activerecord.attributes.product.price'%></strong>
+			  <%= @product.price %>
+			</p>
+
+			<p>
+			  <strong><%= t'activerecord.attributes.product.quantity'%></strong>
+			  <%= @product.quantity %>
+			</p>
+
+
+			<div class="form-actions">
+			  <%= link_to 'Adicionar Produto', add_products_sale_path(@product) %> |
+			</div>
+		</div>
+
+	</div>
+<% end %>
+
+</div>

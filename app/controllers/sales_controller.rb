@@ -8,7 +8,7 @@ class SalesController < ApplicationController
 	end
 
 	def new
-
+		@product = Product.from(current_admin.company).search(params[:q]).first
 	end
 
 	private
