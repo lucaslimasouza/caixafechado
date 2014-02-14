@@ -50,12 +50,6 @@ describe Product do
       expect(Product.search(@product.code).first.code).to be_eql(@product.code)
     end
 
-    it "should return all products when code is nill" do
-      second_product = create(:product)
-
-      expect(Product.search("").size).to be_eql 2
-    end
-
   end
 
 end
