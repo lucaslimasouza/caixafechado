@@ -32,4 +32,14 @@ describe Product do
     it { should have_and_belong_to_many(:sales) }
   end
 
+  context 'search' do
+    it "should return products from a specific Company" do
+      company = create(:company)
+      product = build(:product)
+      product.company = company
+      product.save
+      expect(Product.from(company).first.company).to be_eql company
+    end
+  end
+
 end

@@ -5,4 +5,6 @@ class Product < ActiveRecord::Base
 
 	validates_presence_of :code, :name, :cost, :price, :description, :quantity
 	validates_numericality_of :code, :cost, :price, :quantity
+
+	scope :from, -> company { where(company: company) }
 end
