@@ -32,7 +32,7 @@ describe Product do
     it { should have_and_belong_to_many(:sales) }
   end
 
-  context 'search' do
+  context 'scope #from' do
     it "should return products from a specific Company" do
       company = create(:company)
       product = build(:product)
@@ -41,10 +41,20 @@ describe Product do
       expect(Product.from(company).first.company).to be_eql company
     end
 
+  end
+
+  context '#search' do
     it "should return product by code" do
       product = create(:product) 
       
       expect(Product.search(product.code).first.code).to be_eql(product.code)
+    end
+
+    it "should return all products when code is nill" do
+      product = create(:product)
+      second_product = create(:product)
+
+      expect(Product.search("").size).to be_eql 2
     end
 
   end
