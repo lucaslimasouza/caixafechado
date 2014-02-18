@@ -1,5 +1,5 @@
 <div class="padding white">
-	<h1> Caixa - Quantidade de Produtos: <%= if admin_session[:sale].present? then admin_session[:sale].products.size end %></h1>
+	<h1> Caixa - Quantidade de Produtos: <%= if admin_session[:products_sale].present? then admin_session[:products_sale].size end %></h1>
 
 	<div class="row-fluid">
 		<%= form_tag new_sale_path, method: :get, class: 'alert alert-block center' do %>

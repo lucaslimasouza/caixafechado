@@ -1,9 +1,9 @@
 class SalesController < ApplicationController
 
 	def add_products
-		initialize_sale_on_session
-		@sale.products << Product.find(params[:id])
-		admin_session[:sale] = @sale
+		initialize_products_sale_on_session
+		@products_sale << params[:id]
+		admin_session[:products_sale] = @products_sale
 		redirect_to new_sale_path
 	end
 
@@ -12,10 +12,10 @@ class SalesController < ApplicationController
 	end
 
 	private
-	def initialize_sale_on_session
-		admin_session[:sale].present? ? 
-			@sale = admin_session[:sale] : 
-				@sale = current_admin.company.sales.build
+	def initialize_products_sale_on_session
+		admin_session[:products_sale].present? ? 
+			@products_sale = admin_session[:products_sale] : 
+				@products_sale = Array.new
 	end
 	
 end

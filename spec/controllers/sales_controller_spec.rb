@@ -10,7 +10,7 @@ describe SalesController do
 
 			let(:product) { create(:product) }
 			let(:second_product) { create(:product) }
-			let(:sale_on_session) { subject.admin_session[:sale] }
+			let(:sale_on_session) { subject.admin_session[:products_sale] }
 
 	  	it "should redirect to new template" do
 	  			get :add_products, id: product.id
@@ -21,14 +21,14 @@ describe SalesController do
 			it "should have one product on sale admin" do
 				get :add_products, id: product.id
 
-				expect(sale_on_session.products.size).to be_equal 1				
+				expect(sale_on_session.size).to be_equal 1				
 			end
 
 			it "should not overwrite some product added" do
 				get :add_products, id: product.id
 				get :add_products, id: second_product.id
 
-				expect(sale_on_session.products.size).to be_equal 2 
+				expect(sale_on_session.size).to be_equal 2 
 			end
 
 	  end
