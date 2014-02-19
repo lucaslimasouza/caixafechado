@@ -36,12 +36,20 @@ describe SalesController do
 	  context '#cancel_products' do
 
 	  	it "should redirect to edit tamplete" do
+	  		allow(sale_on_session).to receive(:delete_if).and_return([])
+	  		
 	  		get :cancel_product, id: product.id
 
-	  		subject.should redirect_to edit_sale_path
+	  		expect(subject).to redirect_to edit_sale_path
 	  	end
 
-	  	it "should have anyone product on sale admin" 
+	  	it "should have anyone product on sale admin" do
+	  		get :add_products, id: product.id
+
+	  		get :cancel_product, id: product.id
+
+	  		expect(sale_on_session.size).to be_equal 0
+	  	end
 
 	  	it "should have only one product on sale admin"
 	  end
