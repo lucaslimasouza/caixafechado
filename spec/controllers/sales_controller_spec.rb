@@ -81,6 +81,15 @@ describe SalesController do
 				expect(sale_on_session).to be_nil
 			end
 		end
+
+		context 'template cancel products on sale' do
+			
+			it "should render template cancel products on sale"
+
+			it "should assign @products"
+			
+		end
 	end
+
 
 end
