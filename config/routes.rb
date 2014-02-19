@@ -7,8 +7,13 @@ Caixafechado::Application.routes.draw do
       get :add_products
       get :cancel_product
     end
+  
+    collection do
+      get 'cancel_sale'
+    end
+  
   end
-  get "sales/add_products"
+  
   get "painel_main/index"
   get "home/index"
   devise_for :admins, controllers: {registrations: "admins/registrations"}

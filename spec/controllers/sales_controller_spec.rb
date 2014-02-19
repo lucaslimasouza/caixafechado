@@ -68,6 +68,19 @@ describe SalesController do
 	  	end
 	  end
 
+		context '#cancel_sale' do
+			it "should redirect_to new template" do
+				get :cancel_sale
+
+				expect(subject).to redirect_to new_sale_path
+			end
+			it "should cancel products_sale on session" do
+				get :add_products, id: product.id
+				get :cancel_sale
+
+				expect(sale_on_session).to be_nil
+			end
+		end
 	end
 
 end

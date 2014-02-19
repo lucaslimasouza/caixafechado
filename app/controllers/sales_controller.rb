@@ -16,6 +16,11 @@ class SalesController < ApplicationController
 		redirect_to edit_sale_path		
 	end
 
+	def cancel_sale
+		admin_session[:products_sale] = nil
+		redirect_to new_sale_path
+	end
+
 	private
 	def initialize_products_sale_on_session
 		admin_session[:products_sale].present? ? 
