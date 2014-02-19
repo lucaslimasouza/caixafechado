@@ -68,13 +68,6 @@ describe SalesController do
 	  	end
 	  end
 
-	  context '#edit' do
-	  	it "should have template edit" do
-	  		get :edit, id: product.id
-
-	  		expect(subject).to render_template :edit
-	  	end
-	  end
 	end
 
 end
