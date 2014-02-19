@@ -11,6 +11,10 @@ class SalesController < ApplicationController
 		@product = Product.from(current_admin.company).search(params[:q]).first
 	end
 
+	def cancel_product
+		redirect_to edit_sale_path		
+	end
+
 	private
 	def initialize_products_sale_on_session
 		admin_session[:products_sale].present? ? 

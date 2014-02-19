@@ -5,6 +5,7 @@ Caixafechado::Application.routes.draw do
   resources :sales do
     member do
       get :add_products
+      get :cancel_product
     end
   end
   get "sales/add_products"

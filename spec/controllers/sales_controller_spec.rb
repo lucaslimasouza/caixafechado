@@ -5,12 +5,12 @@ describe SalesController do
 	login_admin
 
 	describe "GET" do
+		let(:product) { create(:product) }
+		let(:sale_on_session) { subject.admin_session[:products_sale] }
 	  
 	  context '#add_products' do
 
-			let(:product) { create(:product) }
 			let(:second_product) { create(:product) }
-			let(:sale_on_session) { subject.admin_session[:products_sale] }
 
 	  	it "should redirect to new template" do
 	  			get :add_products, id: product.id
@@ -35,9 +35,13 @@ describe SalesController do
 
 	  context '#cancel_products' do
 
-	  	it "should redirect to edit tamplete"
+	  	it "should redirect to edit tamplete" do
+	  		get :cancel_product, id: product.id
 
-	  	it "should have anyone product on sale admin"
+	  		subject.should redirect_to edit_sale_path
+	  	end
+
+	  	it "should have anyone product on sale admin" 
 
 	  	it "should have only one product on sale admin"
 	  end
