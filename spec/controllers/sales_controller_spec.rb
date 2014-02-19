@@ -61,10 +61,18 @@ describe SalesController do
 	  end
 
 	  context '#new' do
-	  	it "should have templete new" do
+	  	it "should have template new" do
 	  		get :new
 
 	  		subject.should render_template :new
+	  	end
+	  end
+
+	  context '#edit' do
+	  	it "should have template edit" do
+	  		get :edit, id: product.id
+
+	  		expect(subject).to render_template :edit
 	  	end
 	  end
 	end
