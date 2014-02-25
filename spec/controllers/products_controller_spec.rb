@@ -20,6 +20,8 @@ require 'spec_helper'
 
 describe ProductsController do
 
+  login_admin
+
   # This should return the minimal set of attributes required to create a valid
   # Product. As you add validations to Product, be sure to
   # adjust the attributes here as well.
@@ -32,9 +34,8 @@ describe ProductsController do
 
   describe "GET index" do
     it "assigns all products as @products" do
-      product = Product.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:products)).to eq([product])
+      expect(assigns(:products)).to eq([])
     end
   end
 

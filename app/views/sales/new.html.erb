@@ -1,5 +1,20 @@
 <div class="padding white">
-	<h1> Caixa - Quantidade de Produtos: <%= if admin_session[:products_sale].present? then admin_session[:products_sale].size end %></h1>
+	<div class="row-fluid">
+		
+		<div class="span4">
+			<h3> Total R$  </h3>
+		</div>
+		
+		<div class="span4">
+		<h3>Valor Recebido R$</h3>
+		</div>
+		
+		<div class="span4">
+				<h3>Troco R$ </h3>
+		</div>
+	
+	</div>
+	
 
 	<div class="row-fluid">
 		<%= form_tag new_sale_path, method: :get, class: 'alert alert-block center' do %>
@@ -13,10 +28,11 @@
 		<% end %>
 	</div>
 
-<% if @product.present? then %>
 	
-	<div class="row-fluid">
-		<div class="span12 alert alert-success">
+<div class="row-fluid">
+	<div class="span4 alert alert-success">
+	<h4>Produtos Buscado</h4>
+		<% if @product.present? then %>
 
 			<p>
 			  <strong><%= t'activerecord.attributes.product.code'%></strong>
@@ -42,9 +58,45 @@
 			<div class="form-actions">
 			  <%= link_to 'Adicionar Produto', add_products_sale_path(@product) %> |
 			</div>
-		</div>
+
+		<% end %>
 
 	</div>
-<% end %>
+
+	<div class="span8 alert alert-info">
+			<h4>
+				Produtos adicionados -
+				Quantidade: <%= if admin_session[:products_sale].present? then admin_session[:products_sale].size end %>
+			</h4>
+
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th><%= t'activerecord.attributes.product.code'%></th>
+					<th><%= t'activerecord.attributes.product.name'%></th>
+					<th><%= t'activerecord.attributes.product.price'%></th>
+					<th><%= t'activerecord.attributes.product.quantity'%></th>
+					<th>Cancelar</th>
+				</tr>
+				</thead>
+
+				<tbody>
+					<% Product.where(id: admin_session[:products_sale]).each do |product| %>
+						<tr>
+						  <td><%= product.code %></td>
+						  <td><%= product.name %></td>
+						  <td><%= product.price %></td>
+						  <td><%= product.quantity %></td>
+						  <td><%= link_to 'Cancelar', cancel_product_sale_path(product) %>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+
+	</div>
+
+</div>
+
+<%= link_to 'Cancelar Compra', cancel_sales_path %>
 
 </div>

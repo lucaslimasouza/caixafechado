@@ -9,7 +9,7 @@ Caixafechado::Application.routes.draw do
     end
   
     collection do
-      get 'cancel_sale'
+      get 'cancel'
     end
   
   end
