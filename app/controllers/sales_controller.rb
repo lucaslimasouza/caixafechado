@@ -13,10 +13,10 @@ class SalesController < ApplicationController
 
 	def cancel_product
 		admin_session[:products_sale].delete_if { |id| id == params[:id] }
-		redirect_to edit_sale_path		
+		redirect_to new_sale_path		
 	end
 
-	def cancel_sale
+	def cancel
 		admin_session[:products_sale] = nil
 		redirect_to new_sale_path
 	end

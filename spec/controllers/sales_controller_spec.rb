@@ -34,13 +34,13 @@ describe SalesController do
 
 	  context '#cancel_products' do
 
-	  	it "should redirect to edit tamplete" do
+	  	it "should redirect to new template" do
 	  		allow_message_expectations_on_nil
 	  		allow(nil).to receive(:delete_if).and_return([])
 	  		
 	  		get :cancel_product, id: product.id
 
-	  		expect(subject).to redirect_to edit_sale_path
+	  		expect(subject).to redirect_to new_sale_path
 	  	end
 
 	  	it "should have anyone product on sale admin" do
@@ -70,25 +70,18 @@ describe SalesController do
 
 		context '#cancel_sale' do
 			it "should redirect_to new template" do
-				get :cancel_sale
+				get :cancel
 
 				expect(subject).to redirect_to new_sale_path
 			end
 			it "should cancel products_sale on session" do
 				get :add_products, id: product.id
-				get :cancel_sale
+				get :cancel
 
 				expect(sale_on_session).to be_nil
 			end
 		end
-
-		context 'template cancel products on sale' do
-			
-			it "should render template cancel products on sale"
-
-			it "should assign @products"
-			
-		end
+		
 	end
 
 
