@@ -30,6 +30,12 @@ describe SalesController do
 				expect(sale_on_session.size).to be_equal 2 
 			end
 
+			it "should have price of one product on session" do
+				get :add_products, id: product.id
+			
+				expect(subject.admin_session[:total_sale]).to be_equal product.price.to_f
+			end
+
 	  end
 
 	  context '#cancel_products' do

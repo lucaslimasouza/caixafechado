@@ -4,6 +4,7 @@ module SaleSession
 		initialize_products_sale_on_session
 		@products_sale << params[:id]
 		admin_session[:products_sale] = @products_sale
+		add_price_on_total
 		redirect_to new_sale_path
 	end
 
@@ -22,6 +23,10 @@ module SaleSession
 		admin_session[:products_sale].present? ? 
 		@products_sale = admin_session[:products_sale] : 
 		@products_sale = Array.new
+	end
+
+	def add_price_on_total
+		admin_session[:total_sale] = Product.find(params[:id]).price.to_f
 	end
 
 end
