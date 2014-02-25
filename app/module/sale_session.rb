@@ -17,4 +17,11 @@ module SaleSession
 		redirect_to new_sale_path
 	end
 
+	private
+	def initialize_products_sale_on_session
+		admin_session[:products_sale].present? ? 
+		@products_sale = admin_session[:products_sale] : 
+		@products_sale = Array.new
+	end
+
 end
