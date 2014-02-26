@@ -11,6 +11,7 @@ module SaleSession
 
 	def cancel_product
 		admin_session[:products_sale].delete_if { |id| id == params[:id] }
+		admin_session[:total_sale] -= Product.find(params[:id]).price.to_f
 		redirect_to new_sale_path		
 	end
 
