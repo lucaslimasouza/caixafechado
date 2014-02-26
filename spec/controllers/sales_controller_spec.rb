@@ -103,6 +103,13 @@ describe SalesController do
 
 				expect(sale_on_session).to be_nil
 			end
+
+			it "should clean total on session" do
+				get :add_products, id: product.id
+				get :cancel
+
+				expect(total_on_session).to be_nil
+			end
 		end
 		
 	end
