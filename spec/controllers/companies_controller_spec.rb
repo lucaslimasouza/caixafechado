@@ -65,18 +65,18 @@ describe CompaniesController do
     describe "with valid params" do
       it "creates a new Company" do
         expect {
-          post :create, {:company => valid_attributes}, valid_session
+          post :create, {:company => attributes_for(:company)}, valid_session
         }.to change(Company, :count).by(1)
       end
 
       it "assigns a newly created company as @company" do
-        post :create, {:company => valid_attributes}, valid_session
+        post :create, {:company => attributes_for(:company)}, valid_session
         expect(assigns(:company)).to be_a(Company)
         expect(assigns(:company)).to be_persisted
       end
 
       it "redirects to the created company" do
-        post :create, {:company => valid_attributes}, valid_session
+        post :create, {:company => attributes_for(:company)}, valid_session
         expect(response).to redirect_to(Company.last)
       end
     end
@@ -91,8 +91,8 @@ describe CompaniesController do
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Company.any_instance.stub(:save).and_return(false)
-        post :create, {:company => { "name" => "invalid value" }}, valid_session
+        #Company.any_instance.stub(:save).and_return(false)
+        post :create, {:company => { name: "invalid value" }}, valid_session
         expect(response).to render_template("new")
       end
     end
@@ -130,14 +130,6 @@ describe CompaniesController do
         Company.any_instance.stub(:save).and_return(false)
         put :update, {:id => company.to_param, :company => { "name" => "invalid value" }}, valid_session
         expect(assigns(:company)).to eq(company)
-      end
-
-      it "re-renders the 'edit' template" do
-        company = create(:company)
-        # Trigger the behavior that occurs when invalid params are submitted
-        Company.any_instance.stub(:save).and_return(false)
-        put :update, {:id => company.to_param, :company => { "name" => "invalid value" }}, valid_session
-        expect(response).to render_template("edit")
       end
     end
   end
