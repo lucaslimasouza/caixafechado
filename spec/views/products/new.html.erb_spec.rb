@@ -22,7 +22,6 @@ describe "products/new" do
       assert_select "input#product_cost[name=?]", "product[cost]"
       assert_select "input#product_price[name=?]", "product[price]"
       assert_select "input#product_quantity[name=?]", "product[quantity]"
-      assert_select "input#product_description[name=?]", "product[description]"
     end
   end
 end
