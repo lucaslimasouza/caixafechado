@@ -1,15 +1,15 @@
 class Product < ActiveRecord::Base
 
-	belongs_to :company
-	has_and_belongs_to_many :sales
+belongs_to :company
+has_and_belongs_to_many :sales
 
-	validates_presence_of :code, :name, :cost, :price, :description, :quantity
-	validates_numericality_of :code, :cost, :price, :quantity
+validates_presence_of :code, :name, :cost, :price, :description, :quantity
+validates_numericality_of :code, :cost, :price, :quantity
 
-	scope :from, -> company { where(company: company) }
+scope :from, -> company { where(company: company) }
 
-	def self.search(code)
-		where(code: "#{code}")
-	end
+def self.search(code)
+	where(code: "#{code}")
+end
 
 end

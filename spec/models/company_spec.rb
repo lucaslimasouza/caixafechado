@@ -9,12 +9,12 @@ describe Company do
   end
 
   context "attributes" do
-  	it { should respond_to(:name) }
-  	it { should respond_to(:cnpj) }
-  	it { should respond_to(:address) }
-  	it { should respond_to(:number) }
-  	it { should respond_to(:cep) }
-  	it { should respond_to(:phone) }
+    it { should respond_to(:name) }
+    it { should respond_to(:cnpj) }
+    it { should respond_to(:address) }
+    it { should respond_to(:number) }
+    it { should respond_to(:cep) }
+    it { should respond_to(:phone) }
   end
 
   context "validate presence" do
@@ -27,9 +27,9 @@ describe Company do
   end
 
   context "validate numericality" do
-  	it { should validate_numericality_of(:number) }
-  	it { should validate_numericality_of(:cep) }
-  	it { should validate_numericality_of(:cnpj) }
+    it { should validate_numericality_of(:number) }
+    it { should validate_numericality_of(:cep) }
+    it { should validate_numericality_of(:cnpj) }
   end
 
 end
