@@ -81,7 +81,8 @@
 				</thead>
 
 				<tbody>
-					<% Product.where(id: admin_session[:products_sale]).each do |product| %>
+					<% if admin_session[:products_sale].present? then 
+							admin_session[:products_sale].each do |id| product = Product.find(id) %>
 						<tr>
 						  <td><%= product.code %></td>
 						  <td><%= product.name %></td>
@@ -89,6 +90,7 @@
 						  <td><%= product.quantity %></td>
 						  <td><%= link_to 'Cancelar', cancel_product_sale_path(product) %>
 						</tr>
+						<% end %>
 					<% end %>
 				</tbody>
 			</table>
